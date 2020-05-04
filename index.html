@@ -1,0 +1,89 @@
+<!--A Simple Landing Page
+A landing page is the webpage a person ends up on by clicking on a link. Using techniques introduced in class,
+create a landing page for Sizzling Steaks, a growing chain of steakhouse in the North East. 
+Sizzling Steaks serves the finest cuts of USDA Prime beef served sizzling on 500-degree plates,
+ and offers  award-winning wines and an unforgettable night out.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
+
+.content {
+  position: fixed;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+</style>
+</head>
+<body>
+
+<video autoplay muted loop id="myVideo">
+  <source src="Csteak.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1><font color="red">Sizzling Steaks</font></h1>
+  <p><font color="#dda0dd"> a growing chain of steakhouse in the North East. 
+Sizzling Steaks serves the finest cuts of USDA Prime beef served sizzling on 500-degree plates,
+ and offers  award-winning wines and an unforgettable night out.</font></p>
+  <h1>This Site is Under Construction</h1>
+        <p>Content Coming December 2018</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+}
+</script>
+
+</body>
+</html>
